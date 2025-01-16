@@ -42,7 +42,7 @@ class Card:
     # self.face > other_card.get_face()
     # If they are tied, we return the result of self.suit > other_card.get_suit()
     def __gt__(self, other_card):
-        if self.face > other_card.get_face():
+        if self.face < other_card.get_face():
             return True
         elif (self.face == other_card.get_face()):
             return self.suit > other_card.get_suit()
