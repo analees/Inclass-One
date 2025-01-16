@@ -16,9 +16,7 @@ class Card:
     # Takes as input a face and suit value.
     # If they are not found in the global variables above, the card will be set to a 2 of clubs
     def __init__(self, the_face, the_suit):
-        global face, suit
-	    #swapped suit and face
-        if (the_suit in suit  or the_face in face):
+
             self.face = the_face
             self.suit = the_suit
         else:
@@ -179,8 +177,8 @@ class War_Game:
 
     def play_game(self):
          check_win = self.game_won()
-        counter = 0
-        score =0
+         counter = 0
+         score =0
 	
         while(check_win == -1):
             self.check_shuffle()
