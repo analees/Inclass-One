@@ -179,13 +179,19 @@ class War_Game:
     def play_game(self):
         check_win = self.game_won()
         counter = 0
+	    #initialize score
+	score = 0
         while(check_win == -1):
             self.check_shuffle()
             self.play_round()
             counter += 1
+		#increment score
+	    score += 1
             check_win = self.game_won()
         print("The game is over! %s has won the game!" % self.players[check_win].get_name())
         print("The game took %d rounds to finish!" % counter)
+	    #print score
+	print(score)
         for i in range(len(self.players)):
             if i == check_win:
                 self.players[i].add_win()
