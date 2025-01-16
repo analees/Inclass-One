@@ -188,9 +188,11 @@ class War_Game:
         print("The game took %d rounds to finish!" % counter)
         for i in range(len(self.players)):
             if i == check_win:
-                self.players[i].add_win()
-            else:
+		    #changed to add loss
                 self.players[i].add_loss()
+            else:
+		    #changed to add win
+                self.players[i].add_win()
 
 
     # Tostring for War_Game
