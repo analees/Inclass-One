@@ -178,8 +178,8 @@ class War_Game:
 
     def play_game(self):
          check_win = self.game_won()
-        counter = 0
-        score =0
+         counter = 0
+         score =0
 	
         while(check_win == -1):
             self.check_shuffle()
